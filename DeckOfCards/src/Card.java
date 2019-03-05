@@ -1,9 +1,9 @@
-public class Card{
+public class Card implements Comparable<Card> {
     private int value;
     private Suite suite;
 
     public enum Suite{
-        Diamond(1), Clover(14), Heart(183), Spade(2380);
+        Diamond(1), Clover(2), Heart(3), Spade(4);
         private int multiplier;
         Suite(int multiplier){
             this.multiplier = multiplier;
@@ -16,6 +16,11 @@ public class Card{
     Card(int value, Suite suite){
         this.value = value;
         this.suite = suite;
+    }
+
+    @Override
+    public int compareTo(Card o) {
+        return 0;
     }
 
     public int getValue() {

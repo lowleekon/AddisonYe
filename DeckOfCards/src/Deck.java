@@ -18,6 +18,7 @@ class Deck {
 
     void resetDeck(){
         DOC.sort(new SortCards());
+        //Collections.sort(DOC);
     }
 
     void print(){

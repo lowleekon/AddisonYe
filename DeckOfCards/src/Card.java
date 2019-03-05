@@ -20,23 +20,15 @@ public class Card implements Comparable<Card> {
 
     @Override
     public int compareTo(Card o) {
-        return 0;
+        return o.getValue()*10 + o.getSuite().getMultiplier();
     }
 
     public int getValue() {
         return value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     public Suite getSuite() {
         return suite;
-    }
-
-    public void setSuite(Suite suite) {
-        this.suite = suite;
     }
 
     public String toString(){

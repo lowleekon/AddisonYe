@@ -1,13 +1,13 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 
 class Deck {
 
-    private ArrayList<Card> DOC = new ArrayList<>();
+    private LinkedList<Card> DOC = new LinkedList<>();
 
     Deck(){
-        ArrayList<Card.Suite> suites = new ArrayList<>(
+        LinkedList<Card.Suite> suites = new LinkedList<>(
                 Arrays.asList(Card.Suite.Diamond, Card.Suite.Clover, Card.Suite.Heart, Card.Suite.Spade));
         for (int s = 0; s < 4; s++){
             for (int v = 1; v < 14; v++){

@@ -13,6 +13,11 @@ public class Card implements Comparable<Card> {
         }
     }
 
+    @Override
+    public int hashCode() {
+        return suite.getMultiplier() + value*10;
+    }
+
     Card(int value, Suite suite){
         this.value = value;
         this.suite = suite;
@@ -20,7 +25,7 @@ public class Card implements Comparable<Card> {
 
     @Override
     public int compareTo(Card o) {
-        return o.getValue()*10 + o.getSuite().getMultiplier();
+        return o.hashCode();
     }
 
     public int getValue() {

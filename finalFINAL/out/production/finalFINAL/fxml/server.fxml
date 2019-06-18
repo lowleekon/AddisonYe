@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primary.Controller">
+   <children>
+      <ListView fx:id="outputList" layoutX="14.0" layoutY="14.0" prefHeight="374.0" prefWidth="366.0" />
+      <TextField fx:id="createServerID" layoutX="392.0" layoutY="14.0" prefHeight="40.0" prefWidth="203.0" promptText="Server ID" />
+      <Button fx:id="startServer" layoutX="392.0" layoutY="113.0" mnemonicParsing="false" onAction="#pressStartServer" prefHeight="40.0" prefWidth="203.0" text="Start Server" />
+      <Button fx:id="closeServer" layoutX="392.0" layoutY="160.0" mnemonicParsing="false" onAction="#pressCloseServer" prefHeight="40.0" prefWidth="203.0" text="Close Server" />
+      <TextField fx:id="createPasswordField" layoutX="392.0" layoutY="61.0" prefHeight="40.0" prefWidth="203.0" promptText="Password" />
+   </children>
+</AnchorPane>

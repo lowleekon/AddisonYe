@@ -52,6 +52,7 @@ public class Controller implements Initializable{
             stage.setTitle(title);
             stage.setScene(new Scene(parent));
             stage.show();
+            stage.setResizable(false);
             stage.setOnCloseRequest(event -> {
                 ControllerList.remove(this);
             });
@@ -142,6 +143,9 @@ public class Controller implements Initializable{
 
     public void pressCloseServer(ActionEvent actionEvent) {
         try {
+            Controller controller = ControllerList.controllerList.get(0);
+            controller.serverList.getItems().add("Server has closed.");
+            controller.display.add("Server has closed.");
             ServerCode.server.stop();
         }catch(NullPointerException e){
             JOptionPane.showMessageDialog(null, "ERROR: No server running.", "ERROR OCCURRED", JOptionPane.ERROR_MESSAGE);

@@ -39,8 +39,10 @@ class ClientCode {
                 }
                 if (object instanceof passwordResponse){
                     passwordResponse response = (passwordResponse) object;
-                    for (Controller controller : ControllerList.controllerList) {
-                        controller.kick(response.result);
+                    Controller controller = ControllerList.controllerList.get(0);
+                    controller.kick(response.result);
+                    if(response.result){
+                        controller.refreshList();
                     }
                 }
                 if (object instanceof idResponse){
